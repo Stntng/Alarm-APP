@@ -1,0 +1,44 @@
+﻿<Window x:Class="TimeDate_Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeDate_Application"
+        mc:Ignorable="d"
+        Title="Будильник" Height="300" Width="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel x:Name="TimeDate_DockPanel" Grid.Row="0" Grid.Column="0" Style="{DynamicResource TimeDate_DockPanel}">
+            <TextBlock DataContext="{Binding Current}" x:Name="TimeDate_TextBlock" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource TimeDate_TextBlock}">
+            <Run x:Name="Time_Text" Text="{Binding Path=Time}"></Run>
+            <Run Text=" "></Run>
+            <Run x:Name="Date_Text" Text="{Binding Path=Date}"></Run>
+            </TextBlock>
+        </DockPanel>
+
+        <StackPanel x:Name="Settings_StackPanel" Grid.Row="0" Grid.Column="1" Style="{DynamicResource Settings_StackPanel}">
+            <Label x:Name="Settings_Label" Content="Настройки:" Style="{DynamicResource Settings_Label}"></Label>
+            <ListView x:Name="Settings_ListView" BorderThickness="0"  Style="{DynamicResource Settings_ListView}">
+                <ListViewItem x:Name="Format" Content="Формат" MouseDoubleClick="Format_MouseDoubleClick" Selected="Format_Selected"></ListViewItem>
+                <ListViewItem x:Name="DateColor" Content="Цвет даты" MouseDoubleClick="DateColor_MouseDoubleClick"></ListViewItem>
+                <ListViewItem x:Name="TimeColor" Content="Цвет времени" MouseDoubleClick="TimeColor_MouseDoubleClick"></ListViewItem>
+                <ListViewItem x:Name="BackgroundColor" Content="Цвет заднего фона" MouseDoubleClick="Background_MouseDoubleClick"></ListViewItem>
+                <ListViewItem x:Name="Autorun" Content="Autorun" MouseDoubleClick="Autorun_MouseDoubleClick"></ListViewItem>
+                <ListViewItem x:Name="Theme" Content="Тёмная тема" MouseDoubleClick="DarkTheme_MouseDoubleClick"></ListViewItem>
+            </ListView>
+        </StackPanel>
+        <StackPanel  x:Name="Buttons_StackPanel" Grid.Row="0" Grid.Column="1" Style="{DynamicResource Buttons_StackPanel}" VerticalAlignment="Bottom">
+            <Button x:Name="Set_Alarm" Content="Установить время" Style="{DynamicResource Set_Alarm}" MouseDoubleClick="Set_Alarm_MouseDoubleClick" Click="Set_Alarm_Click"></Button>
+            <Button x:Name="Restore_Settings" Content="Сброс настроек" Style="{DynamicResource Restore_Settings}" MouseDoubleClick="Restore_Settings_DoubleClick"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

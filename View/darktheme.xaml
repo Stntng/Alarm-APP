@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TimeDate_Application">
+    
+    <Style x:Key="TimeDate_DockPanel" TargetType="DockPanel">
+        <Setter Property="Background" Value="Indigo"></Setter>
+    </Style>
+    
+    <Style x:Key="TimeDate_TextBlock" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+    </Style>
+    
+    
+    <Style x:Key="Settings_StackPanel" TargetType="StackPanel">
+        <Setter Property="Background" Value="Purple"></Setter>
+    </Style>
+    
+    <Style x:Key="Settings_Label" TargetType="Label">
+        <Setter Property="Background" Value="Purple"></Setter>
+        <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+    </Style>
+    
+    <Style x:Key="Settings_ListView" TargetType="ListView">
+        <Setter Property="Background" Value="Purple"></Setter>
+        <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+    </Style>
+
+    <Style x:Key="Buttons_StackPanel" TargetType="StackPanel">
+        <Setter Property="Background" Value="Purple"></Setter>
+    </Style>
+
+    <Style x:Key="Set_Alarm" TargetType="Button">
+        <Setter Property="Background" Value="Purple"></Setter>
+        <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+    </Style>
+
+    <Style x:Key="Restore_Settings" TargetType="Button">
+        <Setter Property="Background" Value="Purple"></Setter>
+        <Setter Property="Foreground" Value="WhiteSmoke"></Setter>
+    </Style>
+
+</ResourceDictionary>
